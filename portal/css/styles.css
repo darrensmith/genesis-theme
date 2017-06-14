@@ -1,0 +1,177 @@
+body {
+	margin:0;
+	display:flex;
+	flex-direction:column;
+}
+
+header {
+	width:100%;
+	height:40px;
+	border: 1px solid #aaa;
+	margin-bottom:-1px;
+	position:fixed;
+	top:0px;
+	left:0px;
+	z-index:10;
+	background-color:white;
+}
+
+header > #logo {
+	padding:10px;
+	margin:0px;
+	color:#444;
+	font-size:20px;
+	float:left;
+}
+
+header > #dropdown {
+	float:right;
+	padding:4px;
+	margin-right:20px;
+	margin-top:8px;
+	border: 1px solid #1797c0;
+	border-radius:5px;
+	background-color:#1797c0;
+	color:white;
+}
+
+#content {
+	display:flex;
+	flex:1;
+	margin-top:41px;
+}
+
+nav {
+	width:100px;
+	height:90%;
+	border: 1px solid #aaa;
+	margin:0px;
+	overflow:scroll;
+	margin-left:0px;
+	margin-top:0px;
+	position:relative;
+	order:-1;
+	background:white;
+}
+
+nav > #navInner > .navOption {
+	height:100px;
+	width:100%;
+	border: 1px solid #aaa;
+	font-size:10px;
+	color:#aaa;
+	margin-top:-1px;
+	border-top:0px;
+	border:left:0px;
+	margin-left:-1px;
+	text-align:center;
+}
+
+nav > #navInner > .navHeader {
+	height:20px;
+	width:92px;
+	border: 1px solid #aaa;
+	font-size:10px;
+	color:#aaa;
+	margin:0px;
+	margin-top:-1px;
+	border-top:0px;
+	border:left:0px;
+	margin-left:-1px;
+	text-align:center;
+	position:fixed;
+	background-color:white;
+	z-index:5;
+}
+
+nav > #navInner > .navOption > a > span {
+  	position: relative;
+  	top: 50%;
+  	transform: translateY(-50%);
+  	color:#aaa;
+  	font-size:4em;
+}
+
+aside {
+	padding:20px;
+	position:relative;
+	right:0px;
+	width:100px;
+}
+
+main {
+	width:100%;
+	position:relative;
+	display:flex;
+	overflow:scroll;
+}
+
+#center {
+	width:100%;
+	padding:20px;
+}
+
+footer {
+	clear:both;
+	position:fixed;
+	bottom:0px;
+	left:0px;
+	height:3px;
+	width:100%;
+	background:white;
+	padding-top:5px;
+	padding-bottom:15px;
+	padding-left:10px;
+	clear:both;
+	border:1px solid #aaa;
+	z-index:10;
+	font-size:9px;
+}
+
+@media only screen and (max-width: 500px) {
+	nav {
+		height:100px;
+		width:100%;
+		overflow-x:scroll;
+		overflow-y:hidden;
+		position:fixed;
+	}
+    nav > #navInner {
+	    display: table;
+    	table-layout: fixed;   
+    	width:100%; 	
+    }
+    nav > #navInner > .navHeader {
+    	height:100px;
+    	width:20px;
+    }
+	nav > #navInner > .navOption {
+		width:100px;
+		height:100px;
+		display:table-cell;
+	}
+	nav > #navInner > .navOption > a > span {
+	  	position: relative;
+	  	top: 40%;
+  		color:#aaa;
+  		font-size:3em;
+	  	transform: translateY(-30%);
+	}
+	aside {
+		display:none;
+	}
+	main {
+		margin-top:100px;
+		display:block;
+		margin-right:0px;
+		width:100%;
+		float:left;
+	}
+	#center {
+		width:85%;
+	}
+	#content {
+		width:100%;
+		flex-wrap: wrap;
+	}
+}
