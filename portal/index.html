@@ -13,7 +13,22 @@
 
 		<header id="topbar">
 			<div id="logo">Flexible Layout</div>
-			<div id="dropdown"><span class="fa fa-chevron-down" title="Open Setup" style="margin-right:5px;"></span>Setup</div>
+			<ul class="dropdown">
+				<li>
+					<input class="dropdownCheckbox" id="setup-dropdown-checkbox" type="checkbox" name="setup-dropdown-checkbox"/>
+					<label for="setup-dropdown-checkbox"><span class="fa fa-chevron-down" title="Open Setup" style="margin-right:5px;"></span><span>Account</span></label>
+					<div class="dropdown-content">
+	    				<p>Hello World One!</p>
+	  				</div>
+  				</li>
+				<li>
+					<input class="dropdownCheckbox" id="setup-dropdown-checkbox2" type="checkbox" name="setup-dropdown-checkbox2"/>
+					<label for="setup-dropdown-checkbox2"><span class="fa fa-chevron-down" title="Open Setup" style="margin-right:5px;"></span><span>Setup</span></label>
+					<div class="dropdown-content">
+	    				<p>Hello World Two!</p>
+	  				</div>
+  				</li>
+			</ul>
 		</header>
 
 		<div id="content">
@@ -54,8 +69,11 @@
 
 			<nav id="navOuter">
 				<div id="navInner">
-					<div class="navHeader" id="navHeader"><a href=""><span title="Account">Header</span></a></div>
-					<div class="navOption" id="navCustomers"><a href=""><span class="fa fa-user-circle-o" title="Account"></span></a></div>
+					<div class="navHeader" id="navHeader">
+						<a href=""><span class="fa fa-window-minimize" title="Minimize"></span></a>
+						<a href=""><span class="fa fa-window-restore" title="Toggle Size"></span></a>
+					</div>
+					<div class="navOption navTop" id="navCustomers"><a href=""><span class="fa fa-user-circle-o" title="Account"></span></a></div>
 					<div class="navOption" id="navVendors"><a href=""><span class="fa fa-address-book-o" title="Contacts"></span></a></div>
 					<div class="navOption" id="navInvestors"><a href=""><span class="fa fa-calendar" title="Projects"></span></a></div>
 					<div class="navOption" id="navInvestors"><a href=""><span class="fa fa-file-pdf-o" title="Files"></span></a></div>
